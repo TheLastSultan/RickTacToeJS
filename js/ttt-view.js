@@ -30,7 +30,15 @@ class View {
     $square.addClass(currentPlayer);
     this.game.playMove(comppos, currentPlayer);
     this.checkifOver();
-    document.getElementById("aids").play();
+    const RickMovesound = [
+      document.getElementById("aids"),
+      document.getElementById("hit")
+    ];
+
+    const random =
+      RickMovesound[Math.floor(Math.random() * RickMovesound.length)];
+    console.log(random);
+    random.play();
 
     // debugger;
   }
