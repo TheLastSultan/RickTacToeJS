@@ -1,0 +1,96 @@
+html, body, figure, figcaption, ul, li, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  text-align: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 30px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4px auto;
+  width: 870px;
+  border: 5px solid green;
+}
+
+li {
+  width: 280px;
+  height: 280px;
+  border: 5px solid darkgreen;
+  background: gray;
+  cursor: pointer;
+  display: flex; 
+}
+
+li:hover {
+  background: yellow;
+}
+
+.x,
+.o {
+  background: white;
+  cursor: default;
+}
+
+.x:hover,
+.o:hover {
+  background: white;
+}
+
+.x:after,
+.o:after {
+  display: block;
+  width: 100%;
+  font-size: 60px;
+  line-height: 80px;
+}
+
+.x:after {
+  justify-content: center; 
+  background-image: url("ttt_rickx.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; 
+  content: "";
+}
+
+.o:after {
+  justify-content: center; 
+  background-image: url("ttt_omorty.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; 
+  content: "";
+}
+
+.game-over li {
+  color: red;
+  cursor: default;
+  background: white;
+}
+
+.winner-x .x,
+.winner-o .o {
+  background: light-green;
+  color: white;
+}
+
+figcaption {
+  font-size: 30px;
+}
