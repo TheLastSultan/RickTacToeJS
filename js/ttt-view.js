@@ -30,10 +30,7 @@ class View {
     $square.addClass(currentPlayer);
     this.game.playMove(comppos, currentPlayer);
     this.checkifOver();
-    const sound = new Audio();
-    sound.src = "../css/audio/hit_the_sack_jack.mp3";
-    console.log("soundcheck");
-    sound.play();
+    document.getElementById("aids").play();
 
     // debugger;
   }

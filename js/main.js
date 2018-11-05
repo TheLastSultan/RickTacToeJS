@@ -5,6 +5,6 @@ const ComputerPlayer = require("../solution/computer");
 $(() => {
   const rootEl = $(".ttt");
   const game = new Game();
-  const computer = new ComputerPlayer();
+  const computerPlayer = new ComputerPlayer();
   new View(game, rootEl, computerPlayer);
 });
