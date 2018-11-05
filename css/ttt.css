@@ -115,7 +115,13 @@ figcaption {
 }
 
 .header {
-  background-image: url(title_screen.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  transform: scale(0.8, 0.8);
+  margin-top: 8%;
+}
+
+h4 {
+  font-family: "Tauri", sans-serif;
+  font-size: 40px;
+  color: white;
+  font-weight: 800;
 }

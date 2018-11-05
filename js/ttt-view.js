@@ -1,44 +1,51 @@
+import hitSack from "../css/audio/hit_the_sack_jack.wav";
+
 class View {
-  constructor(game, $el , computerPlayer) {
+  constructor(game, $el, computerPlayer) {
     this.game = game;
     this.$el = $el;
     this.computer = computerPlayer;
-    this.turn = 0 ; 
+    this.turn = 0;
+    this.rickWin = [
+      "../css/audio/hit_the_sack_jack.wav",
+      "../css/audio/Riggity.mp3"
+    ];
 
     this.setupBoard();
     this.bindEvents();
     this.computerMove();
-    
   }
-
-  
 
   bindEvents() {
     // install a handler on the `li` elements inside the board.
-    this.$el.on("click", "li", ( event => {
+    this.$el.on("click", "li", event => {
       const $square = $(event.currentTarget);
       this.makeMove($square);
-    }));
+    });
   }
 
-  computerMove(){
-    
-    const comppos = this.computer.getMove(); 
-    const currentPlayer = "x" ;
-    const $square = $("#"+comppos[0].toString() + comppos[1].toString())
+  computerMove() {
+    const comppos = this.computer.getMove();
+    const currentPlayer = "x";
+    const $square = $("#" + comppos[0].toString() + comppos[1].toString());
 
     $square.addClass(currentPlayer);
-    this.game.playMove(comppos,currentPlayer);
+    this.game.playMove(comppos, currentPlayer);
     this.checkifOver();
-    // debugger; 
+    const sound = new Audio();
+    sound.src = "../css/audio/hit_the_sack_jack.wav";
+    console.log("soundcheck");
+    sound.play();
+
+    // debugger;
   }
-  
+
   makeMove($square) {
     const pos = $square.data("pos");
     const currentPlayer = "o";
 
     try {
-      this.game.playMove(pos,currentPlayer);
+      this.game.playMove(pos, currentPlayer);
     } catch (e) {
       alert("This " + e.msg.toLowerCase());
       return;
@@ -47,11 +54,11 @@ class View {
     // feed the move to the comptuer AI
     $square.addClass(currentPlayer);
     this.computer.updateComputer(pos);
-    this.computerMove(); 
+    this.computerMove();
     this.checkifOver();
   }
 
-  checkifOver(){
+  checkifOver() {
     if (this.game.isOver()) {
       // cleanup click handlers.
       this.$el.off("click");
@@ -62,7 +69,7 @@ class View {
 
       if (winner) {
         this.$el.addClass(`winner-${winner}`);
-        $figcaption.html(`You win, ${winner}!`);
+        $figcaption.html(`Pathetic. Even by Morty Standards!`);
       } else {
         $figcaption.html("It's a draw!");
       }
@@ -78,7 +85,7 @@ class View {
       for (let colIdx = 0; colIdx < 3; colIdx++) {
         let $li = $("<li>");
         $li.data("pos", [rowIdx, colIdx]);
-        $li.attr("id", rowIdx.toString()+ colIdx.toString());
+        $li.attr("id", rowIdx.toString() + colIdx.toString());
 
         $ul.append($li);
       }
