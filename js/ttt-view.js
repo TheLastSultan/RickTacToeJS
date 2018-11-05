@@ -35,12 +35,35 @@ class View {
       document.getElementById("hit")
     ];
 
-    const random =
-      RickMovesound[Math.floor(Math.random() * RickMovesound.length)];
-    console.log(random);
-    random.play();
+    this.makeMoveNoise("rick");
 
     // debugger;
+  }
+
+  makeMoveNoise(character) {
+    const RickMovesound = [
+      document.getElementById("aids"),
+      document.getElementById("hit")
+    ];
+
+    if (character == "rick") {
+      const random =
+        RickMovesound[Math.floor(Math.random() * RickMovesound.length)];
+      console.log(random);
+      random.play();
+    } else {
+      document.getElementById("oh").play();
+    }
+  }
+
+  makeWinNoise() {
+    const rick = [
+      document.getElementById("and"),
+      document.getElementById("woo"),
+      document.getElementById("riggity")
+    ];
+    const random = rick[Math.floor(Math.random() * rick.length)];
+    random.play();
   }
 
   makeMove($square) {
@@ -56,6 +79,7 @@ class View {
 
     // feed the move to the comptuer AI
     $square.addClass(currentPlayer);
+    this.makeMoveNoise("morty");
     this.computer.updateComputer(pos);
     this.computerMove();
     this.checkifOver();
@@ -73,6 +97,7 @@ class View {
       if (winner) {
         this.$el.addClass(`winner-${winner}`);
         $figcaption.html(`Pathetic. Even by Morty Standards!`);
+        this.makeWinNoise();
       } else {
         $figcaption.html("It's a draw!");
       }
