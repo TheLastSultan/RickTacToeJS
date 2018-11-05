@@ -1,4 +1,10 @@
-html, body, figure, figcaption, ul, li, h1 {
+html,
+body,
+figure,
+figcaption,
+ul,
+li,
+h1 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -10,10 +16,16 @@ ul {
   list-style: none;
 }
 
+ul li {
+  background-color: transparent;
+}
 body {
   font-family: sans-serif;
   text-align: center;
   font-weight: bold;
+  background-image: url("./rmbackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
@@ -35,7 +47,7 @@ li {
   border: 5px solid darkgreen;
   background: gray;
   cursor: pointer;
-  display: flex; 
+  display: flex;
 }
 
 li:hover {
@@ -62,21 +74,28 @@ li:hover {
 }
 
 .x:after {
-  justify-content: center; 
+  justify-content: center;
   background-image: url("ttt_rickx.png");
+
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 1; 
+  background-color: red;
+  z-index: 1;
   content: "";
 }
 
 .o:after {
-  justify-content: center; 
+  justify-content: center;
   background-image: url("ttt_omorty.png");
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 1; 
+  z-index: 1;
   content: "";
+  background-color: transparent;
+}
+
+.ttt {
+  transform: scale(0.8, 0.8);
 }
 
 .game-over li {
@@ -88,9 +107,15 @@ li:hover {
 .winner-x .x,
 .winner-o .o {
   background: light-green;
-  color: white;
+  color: red;
 }
 
 figcaption {
   font-size: 30px;
+}
+
+.header {
+  background-image: url(title_screen.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
