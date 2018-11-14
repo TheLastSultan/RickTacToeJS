@@ -1,6 +1,6 @@
-# RickTacToe
+# RickTacToe (Unbeatable)
 
-##### Rick is absolutley *UNBEATABLE* in RickTacToe. As an inferior Morty, you don't stand a chance against the far superior Rick, but you sure can try anyway.
+##### As an inferior Morty, you don't stand a chance against the far superior Rick, but you sure can try anyway.
 
 #### [play it live here!](https://thelastsultan.github.io/RickTacToeJS/) 
 
