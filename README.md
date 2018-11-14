@@ -1,4 +1,4 @@
-#RickTacToe
+# RickTacToe
 ##### [play it live here!](https://thelastsultan.github.io/RickTacToeJS/) || [GithubRepo](https://github.com/TheLastSultan/RickTacToeJS/) 
 
 ___
