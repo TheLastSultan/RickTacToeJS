@@ -1,8 +1,8 @@
 # RickTacToeJ
 
-## Rick is absolutley unbeatable in RickTacToe. As an inferior Morty, you don't stand a chance against the far superior Rick, but you sure can try anyway.
+### Rick is absolutley unbeatable in RickTacToe. As an inferior Morty, you don't stand a chance against the far superior Rick, but you sure can try anyway.
 
-##[play it live here!](https://thelastsultan.github.io/RickTacToeJS/) 
+#### [play it live here!](https://thelastsultan.github.io/RickTacToeJS/) 
 
 Rick Tac Toe is written with Javascript, JQuery, and Webpack. At difficulty level 3, the AI to make it unbeatable is done by prioritizing the following moves.
 (1) Check for winning move 
