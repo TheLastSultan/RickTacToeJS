@@ -1,14 +1,15 @@
-# RickTacToe (Unbeatable)
+#RickTacToe
+##### [play it live here!](https://thelastsultan.github.io/RickTacToeJS/) || [GithubRepo](https://github.com/TheLastSultan/RickTacToeJS/) 
 
+___
 ##### As an inferior Morty, you don't stand a chance against the far superior Rick, but you sure can try anyway.
 
-#### [play it live here!](https://thelastsultan.github.io/RickTacToeJS/) 
 
-Rick Tac Toe is written with Javascript, JQuery, and Webpack. At difficulty level 3, the AI to make it unbeatable is done by prioritizing the following moves.
-1. Check for winning move 
-2. Check for defensive Block
-3. Check for Opposing Corner
-4. Play random if no priroity
+Rick Tac Toe is written with Javascript, JQuery, and Webpack. At difficulty level 3, the AI to make it unbeatable is done by prioritizing the following moves.</br>
+1. Check for winning move </br>
+2. Check for defensive Block</br>
+3. Check for Opposing Corner</br>
+4. Play random  </br>
 
 ```javascript
  getMove(){
@@ -31,4 +32,3 @@ Rick Tac Toe is written with Javascript, JQuery, and Webpack. At difficulty leve
 }
 ```
 Of course, part of what makes Rick unbeatable in Rick-Tac-Toe is that he always goes first :) 
-
