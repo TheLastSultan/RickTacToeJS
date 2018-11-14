@@ -28,7 +28,7 @@ Rick Tac Toe is written with Javascript, JQuery, and Webpack. At difficulty leve
                 move = this.checkCornersThanRandom();     
             }
         };
-alert(s);
+}
 ```
 Of course, part of what makes Rick unbeatable in Rick-Tac-Toe is that he always goes first?
 
